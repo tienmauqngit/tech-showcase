@@ -94,13 +94,13 @@
 }
 
 .testimonial-tag {
-  background: rgba(99,102,241,0.1);
+  background: rgba(15,76,129,0.12);
   color: var(--primary);
   font-size: 12px;
   font-weight: 600;
   padding: 4px 12px;
   border-radius: 100px;
-  border: 1px solid rgba(99,102,241,0.2);
+  border: 1px solid rgba(15,76,129,0.24);
 }
 
 .testimonial-nav {
@@ -126,7 +126,7 @@
 .nav-btn:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background: rgba(99,102,241,0.05);
+  background: rgba(15,76,129,0.08);
 }
 
 .dots {

@@ -68,7 +68,7 @@
 
 .nav-link:hover {
   color: var(--primary);
-  background: rgba(99,102,241,0.08);
+  background: rgba(15,76,129,0.1);
 }
 
 .nav-actions {
@@ -129,7 +129,7 @@
 }
 
 .mobile-nav-link:hover {
-  background: rgba(99,102,241,0.08);
+  background: rgba(15,76,129,0.1);
   color: var(--primary);
 }
 
