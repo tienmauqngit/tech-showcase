@@ -20,7 +20,7 @@ export default function CTA() {
           </h2>
           <p className="cta-desc">
             Nhiều doanh nghiệp đã tin tưởng TechVision. Bắt đầu hôm nay
-            với gói miễn phí — không cần thẻ tín dụng, không cam kết.
+            với gói MIỄN PHÍ — không cần thẻ tín dụng, không cam kết.
           </p>
           <div className="cta-actions">
             <a href="#pricing" className="btn btn-white">
