@@ -85,7 +85,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
-          port: 21
           local-dir: ./dist/
           server-dir: /domains/dichvucongngheqng.com/public_html/
           dangerous-clean-slate: true
