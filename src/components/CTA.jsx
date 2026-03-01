@@ -19,7 +19,7 @@ export default function CTA() {
             <span>doanh nghiệp của bạn?</span>
           </h2>
           <p className="cta-desc">
-            Hơn 10,000 doanh nghiệp đã tin tưởng TechVision. Bắt đầu hôm nay
+            Nhiều doanh nghiệp đã tin tưởng TechVision. Bắt đầu hôm nay
             với gói miễn phí — không cần thẻ tín dụng, không cam kết.
           </p>
           <div className="cta-actions">
