@@ -4,44 +4,44 @@ import './Testimonials.css'
 
 const testimonials = [
   {
-    name: 'Nguyễn Thanh Hải',
-    role: 'CEO',
-    company: 'VietCommerce JSC',
-    avatar: 'NH',
-    avatarBg: '#6366f1',
+    name: 'Tran Minh Khang',
+    role: 'Giam doc van hanh',
+    company: 'Benh vien da khoa',
+    avatar: 'TK',
+    avatarBg: '#0f766e',
     rating: 5,
-    content: 'TechVision đã giúp chúng tôi tăng doanh thu 42% chỉ trong 6 tháng. Hệ thống analytics cực kỳ mạnh mẽ, giúp chúng tôi hiểu rõ hành vi khách hàng và tối ưu chiến dịch marketing hiệu quả chưa từng thấy.',
-    tag: 'TechVision Analytics',
+    content: 'Sau khi trien khai Zalo AI, so cuoc goi lap lai ve thu tuc kham giam manh. Nguoi benh nhan nhan huong dan ro rang hon va dat lich nhanh hon.',
+    tag: 'Zalo AI tu van y te',
   },
   {
-    name: 'Trần Thị Mai Anh',
-    role: 'CTO',
-    company: 'SmartRetail Vietnam',
-    avatar: 'TM',
+    name: 'Le Thu Trang',
+    role: 'Truong phong mot cua',
+    company: 'Don vi hanh chinh',
+    avatar: 'LT',
+    avatarBg: '#0284c7',
+    rating: 5,
+    content: 'Chatbot xu ly phan lon cau hoi co ban ve ho so va quy trinh. Nhan vien co them thoi gian tap trung cho ho so phuc tap, chat luong phuc vu tang ro.',
+    tag: 'Chatbot hanh chinh cong',
+  },
+  {
+    name: 'Nguyen Quoc Bao',
+    role: 'CEO',
+    company: 'Cong ty dich vu tai chinh',
+    avatar: 'NB',
+    avatarBg: '#2563eb',
+    rating: 5,
+    content: 'AI Workplace giup doi ngu van phong xu ly tai lieu nhanh hon va chuan hon. Chi sau mot quy, KPI nang suat cua team da tang vuot muc ky vong.',
+    tag: 'AI trong cong viec noi bo',
+  },
+  {
+    name: 'Pham Gia Han',
+    role: 'Head of Customer Care',
+    company: 'Chuoi phong kham',
+    avatar: 'PH',
     avatarBg: '#10b981',
     rating: 5,
-    content: 'Chúng tôi đã thử nhiều giải pháp khác nhau trước khi chọn TechVision. Tốc độ triển khai nhanh đến ngạc nhiên — chỉ 3 ngày để toàn bộ hệ thống đi vào hoạt động. Đội ngũ support xuất sắc!',
-    tag: 'TechVision Commerce',
-  },
-  {
-    name: 'Phạm Đức Minh',
-    role: 'COO',
-    company: 'TechStartup Hub',
-    avatar: 'PM',
-    avatarBg: '#8b5cf6',
-    rating: 5,
-    content: 'AI Studio của TechVision đã cho phép chúng tôi xây dựng chatbot hỗ trợ khách hàng 24/7 mà không cần một kỹ sư AI nào. ROI đạt 380% chỉ sau 4 tháng triển khai.',
-    tag: 'TechVision AI Studio',
-  },
-  {
-    name: 'Lê Hoàng Long',
-    role: 'HR Director',
-    company: 'ManufacturingCo',
-    avatar: 'LL',
-    avatarBg: '#f59e0b',
-    rating: 5,
-    content: 'Quản lý 2,000 nhân viên trở nên đơn giản hơn rất nhiều với TechVision HRM. Tự động hóa hoàn toàn quy trình tính lương và chấm công, tiết kiệm 80% thời gian của phòng HR mỗi tháng.',
-    tag: 'TechVision HRM',
+    content: 'He thong da kenh cua TechVision dong bo du lieu hoi dap giua web va Zalo. Doi CSKH theo doi moi yeu cau tren mot man hinh, khong bo sot khach hang.',
+    tag: 'Omnichannel support AI',
   },
 ]
 
@@ -59,11 +59,11 @@ export default function Testimonials() {
         <div className="testimonials-header">
           <div className="section-tag">
             <MessageSquare size={14} />
-            Khách hàng nói gì
+            Khach hang danh gia
           </div>
           <h2 className="section-title">
-            Hàng ngàn doanh nghiệp<br />
-            <span className="gradient-text">đã tin tưởng lựa chọn</span>
+            Phan hoi tu cac don vi<br />
+            <span className="gradient-text">da ung dung AI vao van hanh</span>
           </h2>
         </div>
 

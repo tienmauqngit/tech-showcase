@@ -1,34 +1,34 @@
-import { UserPlus, Settings, Rocket, TrendingUp, Lightbulb } from 'lucide-react'
+import { SearchCheck, Settings, Rocket, TrendingUp, Lightbulb } from 'lucide-react'
 import './HowItWorks.css'
 
 const steps = [
   {
     number: '01',
-    icon: <UserPlus size={28} />,
-    color: '#6366f1',
-    title: 'Đăng ký & Cài đặt',
-    desc: 'Tạo tài khoản trong 2 phút, không cần thẻ tín dụng. Chọn gói phù hợp và bắt đầu ngay.',
+    icon: <SearchCheck size={28} />,
+    color: '#0f766e',
+    title: 'Khao sat bai toan',
+    desc: 'Phan tich quy trinh tiep nhan - tu van - xu ly cua don vi de chon dung diem ung dung AI.',
   },
   {
     number: '02',
     icon: <Settings size={28} />,
-    color: '#06b6d4',
-    title: 'Cấu hình & Tích hợp',
-    desc: 'Kết nối các công cụ hiện có của bạn qua 500+ integration. Nhập dữ liệu tự động, không mất dữ liệu.',
+    color: '#2563eb',
+    title: 'Dung mo hinh va du lieu',
+    desc: 'Xay bo tri thuc tu tai lieu nghiep vu, mau hoi dap va kich ban van hanh theo tung phong ban.',
   },
   {
     number: '03',
     icon: <Rocket size={28} />,
-    color: '#8b5cf6',
-    title: 'Triển khai & Vận hành',
-    desc: 'Đội ngũ chuyên gia hỗ trợ onboarding 1-1. Hệ thống sẵn sàng hoạt động trong vòng 5 phút.',
+    color: '#0284c7',
+    title: 'Trien khai da kenh',
+    desc: 'Ket noi chatbot website, Zalo OA, fanpage va tong dai; cau hinh chuyen tiep nhan vien khi can.',
   },
   {
     number: '04',
     icon: <TrendingUp size={28} />,
     color: '#10b981',
-    title: 'Tăng trưởng & Mở rộng',
-    desc: 'Theo dõi KPI thời gian thực. AI tự động đề xuất tối ưu hóa để doanh nghiệp tăng trưởng bền vững.',
+    title: 'Toi uu lien tuc',
+    desc: 'Do luong hieu qua, huan luyen mo hinh theo du lieu moi va mo rong tinh huong su dung theo thang.',
   },
 ]
 
@@ -39,14 +39,15 @@ export default function HowItWorks() {
         <div className="hiw-header">
           <div className="section-tag">
             <Lightbulb size={14} />
-            Cách hoạt động
+            Quy trinh trien khai
           </div>
           <h2 className="section-title">
-            Bắt đầu trong{' '}
-            <span className="gradient-text">4 bước đơn giản</span>
+            Tu bai toan den he thong van hanh<br />
+            <span className="gradient-text">trong 4 buoc ro rang</span>
           </h2>
           <p className="section-subtitle">
-            Từ đăng ký đến vận hành hoàn chỉnh, chúng tôi đồng hành cùng bạn ở mỗi bước.
+            Duoc thiet ke de don vi co the dua AI vao cong viec mot cach an toan,
+            nhanh gon va co the do luong hieu qua ngay.
           </p>
         </div>
 
@@ -61,7 +62,7 @@ export default function HowItWorks() {
                 </div>
                 {i < steps.length - 1 && (
                   <div className="step-line">
-                    <div className="step-line-fill" style={{ background: `linear-gradient(90deg, ${step.color}, ${steps[i+1].color})` }} />
+                    <div className="step-line-fill" style={{ background: `linear-gradient(90deg, ${step.color}, ${steps[i + 1].color})` }} />
                   </div>
                 )}
               </div>

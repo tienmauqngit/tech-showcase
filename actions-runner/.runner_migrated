@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 21,
+  "agentName": "DESKTOP-F161D1B",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus25.actions.githubusercontent.com/9nu3DUUEoHzrXX1wJ4kQCIh7gMGMk6uhSqXDOQSnbRGswHut1d/",
+  "gitHubUrl": "https://github.com/tienmauqngit/tech-showcase",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

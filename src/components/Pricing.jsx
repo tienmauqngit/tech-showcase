@@ -4,75 +4,68 @@ import './Pricing.css'
 
 const plans = [
   {
-    name: 'Starter',
+    name: 'Basic',
     icon: <Zap size={22} />,
-    color: '#6366f1',
-    monthlyPrice: 0,
-    yearlyPrice: 0,
-    desc: 'Hoàn hảo để bắt đầu và thử nghiệm',
-    cta: 'Bắt đầu miễn phí',
+    color: '#0f766e',
+    monthlyPrice: 990000,
+    yearlyPrice: 790000,
+    desc: 'Cho doanh nghiep nho bat dau chatbot va tu van tu dong',
+    cta: 'Dang ky goi Basic',
     ctaStyle: 'outline',
     features: [
-      { text: '3 người dùng', ok: true },
-      { text: '5 dự án', ok: true },
-      { text: '10GB lưu trữ', ok: true },
-      { text: 'Analytics cơ bản', ok: true },
-      { text: 'API access', ok: true },
-      { text: 'Integrations', ok: false },
-      { text: 'AI Features', ok: false },
-      { text: 'Hỗ trợ 24/7', ok: false },
-      { text: 'Custom domain', ok: false },
+      { text: '1 kenh chatbot website', ok: true },
+      { text: '50 kich ban hoi dap', ok: true },
+      { text: '2 tai khoan quan tri', ok: true },
+      { text: 'Bao cao co ban', ok: true },
+      { text: 'Tich hop Zalo OA', ok: false },
+      { text: 'Kho tri thuc nang cao', ok: false },
+      { text: 'SLA rieng', ok: false },
     ],
   },
   {
     name: 'Professional',
     icon: <Rocket size={22} />,
-    color: '#6366f1',
-    monthlyPrice: 1490000,
-    yearlyPrice: 1190000,
-    desc: 'Dành cho team đang tăng trưởng nhanh',
-    cta: 'Dùng thử 14 ngày',
+    color: '#0284c7',
+    monthlyPrice: 3490000,
+    yearlyPrice: 2890000,
+    desc: 'Cho don vi can da kenh: web, Zalo AI, CSKH va bao cao van hanh',
+    cta: 'Nhan demo Professional',
     ctaStyle: 'primary',
     popular: true,
     features: [
-      { text: '25 người dùng', ok: true },
-      { text: 'Không giới hạn dự án', ok: true },
-      { text: '100GB lưu trữ', ok: true },
-      { text: 'Analytics nâng cao', ok: true },
-      { text: 'API access đầy đủ', ok: true },
-      { text: '500+ Integrations', ok: true },
-      { text: 'AI Features (giới hạn)', ok: true },
-      { text: 'Hỗ trợ 24/7 priority', ok: true },
-      { text: 'Custom domain', ok: false },
+      { text: 'Da kenh: web + Zalo OA + fanpage', ok: true },
+      { text: 'Khong gioi han kich ban', ok: true },
+      { text: 'Kho tri thuc theo phong ban', ok: true },
+      { text: 'Phan luong toi nhan vien truc', ok: true },
+      { text: 'Dashboard KPI theo bo phan', ok: true },
+      { text: 'API ket noi CRM/HIS', ok: true },
+      { text: 'SLA mo rong', ok: false },
     ],
   },
   {
     name: 'Enterprise',
     icon: <Building2 size={22} />,
-    color: '#10b981',
+    color: '#2563eb',
     monthlyPrice: null,
     yearlyPrice: null,
-    desc: 'Giải pháp tùy chỉnh cho doanh nghiệp lớn',
-    cta: 'Liên hệ tư vấn',
+    desc: 'Giai phap tuy chinh cho benh vien, hanh chinh cong va tap doan',
+    cta: 'Lien he bao gia',
     ctaStyle: 'dark',
     features: [
-      { text: 'Không giới hạn người dùng', ok: true },
-      { text: 'Không giới hạn dự án', ok: true },
-      { text: 'Lưu trữ không giới hạn', ok: true },
-      { text: 'Analytics toàn diện + BI', ok: true },
-      { text: 'API & Webhooks không giới hạn', ok: true },
-      { text: 'Tất cả Integrations', ok: true },
-      { text: 'AI Features không giới hạn', ok: true },
-      { text: 'Dedicated support manager', ok: true },
-      { text: 'Custom domain & SSO', ok: true },
+      { text: 'Kien truc va quy trinh tuy chinh', ok: true },
+      { text: 'Bao mat va phan quyen theo chinh sach', ok: true },
+      { text: 'Tich hop sau voi he thong noi bo', ok: true },
+      { text: 'On-premise hoac private cloud', ok: true },
+      { text: 'SLA + doi van hanh rieng', ok: true },
+      { text: 'Dao tao theo phong ban', ok: true },
+      { text: 'Ho tro trien khai toan quoc', ok: true },
     ],
   },
 ]
 
 function formatPrice(p) {
-  if (p === null) return 'Tùy chỉnh'
-  if (p === 0) return 'Miễn phí'
-  return `₫${(p / 1000).toFixed(0)}K`
+  if (p === null) return 'Tuy chinh'
+  return `${(p / 1000000).toFixed(2)}M`
 }
 
 export default function Pricing() {
@@ -84,41 +77,39 @@ export default function Pricing() {
         <div className="pricing-header">
           <div className="section-tag">
             <Tag size={14} />
-            Bảng giá
+            Bang gia giai phap
           </div>
           <h2 className="section-title">
-            Giá cả minh bạch,<br />
-            <span className="gradient-text">không phát sinh ẩn phí</span>
+            Chon goi phu hop<br />
+            <span className="gradient-text">quy mo va muc tieu trien khai</span>
           </h2>
           <p className="section-subtitle">
-            Chọn gói phù hợp với quy mô doanh nghiệp. Nâng cấp hoặc hủy bất kỳ lúc nào.
+            Co ho tro tu van de xep cau hinh phu hop tung don vi, co the mo rong
+            theo giai doan ma khong phai lam lai he thong.
           </p>
 
           <div className="billing-toggle">
-            <span className={!yearly ? 'active' : ''}>Thanh toán tháng</span>
+            <span className={!yearly ? 'active' : ''}>Thanh toan thang</span>
             <button
               className={`toggle-btn ${yearly ? 'on' : ''}`}
-              onClick={() => setYearly(v => !v)}
+              onClick={() => setYearly((v) => !v)}
               aria-label="Toggle yearly billing"
             >
               <span className="toggle-knob" />
             </button>
             <span className={yearly ? 'active' : ''}>
-              Thanh toán năm
-              <span className="save-badge">Tiết kiệm 20%</span>
+              Thanh toan nam
+              <span className="save-badge">Tiet kiem ~17%</span>
             </span>
           </div>
         </div>
 
         <div className="pricing-grid">
           {plans.map((plan, i) => (
-            <div
-              key={i}
-              className={`pricing-card ${plan.popular ? 'popular' : ''}`}
-            >
+            <div key={i} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
               {plan.popular && (
                 <div className="popular-badge">
-                  <Zap size={13} fill="white" /> Phổ biến nhất
+                  <Zap size={13} fill="white" /> Goi duoc chon nhieu
                 </div>
               )}
 
@@ -131,13 +122,13 @@ export default function Pricing() {
                   <span className="price-amount">
                     {formatPrice(yearly ? plan.yearlyPrice : plan.monthlyPrice)}
                   </span>
-                  {plan.monthlyPrice !== null && plan.monthlyPrice > 0 && (
-                    <span className="price-period">/tháng</span>
+                  {plan.monthlyPrice !== null && (
+                    <span className="price-period">/thang</span>
                   )}
                 </div>
                 {yearly && plan.monthlyPrice > 0 && (
                   <div className="price-yearly-note">
-                    Thanh toán ₫{((plan.yearlyPrice * 12) / 1000000).toFixed(1)}M/năm
+                    Thanh toan {(plan.yearlyPrice * 12 / 1000000).toFixed(2)}M/nam
                   </div>
                 )}
                 <p className="plan-desc">{plan.desc}</p>
@@ -165,8 +156,8 @@ export default function Pricing() {
         </div>
 
         <div className="pricing-footer">
-          <p>Tất cả các gói đều bao gồm SSL miễn phí, backup tự động hàng ngày, và SLA uptime 99.9%</p>
-          <p>Có câu hỏi về giá? <a href="#faq" style={{ color: 'var(--primary)', fontWeight: 600 }}>Xem FAQ</a> hoặc <a href="#" style={{ color: 'var(--primary)', fontWeight: 600 }}>liên hệ chúng tôi</a></p>
+          <p>Tat ca goi deu bao gom onboarding, tai lieu huong dan va bao cao hieu qua trien khai.</p>
+          <p>Can phuong an rieng cho don vi? <a href="#faq" style={{ color: 'var(--primary)', fontWeight: 600 }}>Xem FAQ</a> hoac <a href="#" style={{ color: 'var(--primary)', fontWeight: 600 }}>yeu cau tu van 1-1</a>.</p>
         </div>
       </div>
     </section>

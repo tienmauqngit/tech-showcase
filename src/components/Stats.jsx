@@ -3,12 +3,12 @@ import { TrendingUp } from 'lucide-react'
 import './Stats.css'
 
 const stats = [
-  { value: 10000, suffix: '+', label: 'Doanh nghiệp tin dùng', desc: 'Trên 40 quốc gia và vùng lãnh thổ' },
-  { value: 99.9, suffix: '%', label: 'Uptime SLA', desc: 'Cam kết hoạt động liên tục' },
-  { value: 500, suffix: 'M+', label: 'Giao dịch/tháng', desc: 'Xử lý an toàn, tốc độ cao' },
-  { value: 4.9, suffix: '★', label: 'Điểm đánh giá', desc: 'Từ khách hàng trên toàn cầu' },
-  { value: 35, suffix: '%', label: 'Tăng doanh thu TB', desc: 'Của khách hàng sử dụng TechVision' },
-  { value: 5, suffix: ' phút', label: 'Thời gian triển khai', desc: 'Từ đăng ký đến sẵn sàng dùng' },
+  { value: 120, suffix: '+', label: 'Du an AI da trien khai', desc: 'Cho doanh nghiep, don vi cong va benh vien' },
+  { value: 76, suffix: '%', label: 'Ti le hoi dap tu dong', desc: 'Giam tai tong dai va bo phan tiep nhan' },
+  { value: 24, suffix: '/7', label: 'Van hanh lien tuc', desc: 'Khach hang duoc tu van moi luc' },
+  { value: 40, suffix: '%', label: 'Giam chi phi CSKH TB', desc: 'Nho toi uu quy trinh tu van va phan luong' },
+  { value: 3, suffix: ' ngay', label: 'Go-live nhanh', desc: 'Voi kich ban co ban cho web va Zalo OA' },
+  { value: 93, suffix: '%', label: 'Muc do hai long', desc: 'Theo khao sat sau trien khai va van hanh' },
 ]
 
 function useCountUp(target, duration = 1800, start = false) {
@@ -55,10 +55,9 @@ export default function Stats() {
   const ref = useRef(null)
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { threshold: 0.2 }
-    )
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setVisible(true)
+    }, { threshold: 0.2 })
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
@@ -73,11 +72,11 @@ export default function Stats() {
         <div className="stats-header">
           <div className="section-tag" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', borderColor: 'rgba(255,255,255,0.2)' }}>
             <TrendingUp size={14} />
-            Số liệu thực tế
+            So lieu trien khai
           </div>
           <h2 className="section-title" style={{ color: 'white' }}>
-            Những con số nói lên<br />
-            <span style={{ opacity: 0.8 }}>tất cả</span>
+            Ket qua do luong duoc<br />
+            <span style={{ opacity: 0.85 }}>tu cac du an thuc te</span>
           </h2>
         </div>
         <div className="stats-grid">

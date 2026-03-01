@@ -3,10 +3,10 @@ import { Menu, X, Zap } from 'lucide-react'
 import './Header.css'
 
 const navLinks = [
-  { label: 'Tính năng', href: '#features' },
-  { label: 'Sản phẩm', href: '#products' },
-  { label: 'Cách hoạt động', href: '#how-it-works' },
-  { label: 'Bảng giá', href: '#pricing' },
+  { label: 'Giai phap', href: '#features' },
+  { label: 'San pham AI', href: '#products' },
+  { label: 'Quy trinh', href: '#how-it-works' },
+  { label: 'Bang gia', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
 ]
 
@@ -35,11 +35,11 @@ export default function Header() {
             <div className="logo-icon">
               <Zap size={20} />
             </div>
-            <span className="logo-text">TechVision</span>
+            <span className="logo-text">TechVision AI</span>
           </a>
 
           <ul className="nav-links">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <a href={link.href} className="nav-link" onClick={(e) => handleNavClick(e, link.href)}>
                   {link.label}
@@ -49,9 +49,9 @@ export default function Header() {
           </ul>
 
           <div className="nav-actions">
-            <a href="#" className="nav-login">Đăng nhập</a>
+            <a href="#" className="nav-login">Dang nhap</a>
             <a href="#pricing" className="btn btn-primary nav-cta" onClick={(e) => handleNavClick(e, '#pricing')}>
-              Dùng thử miễn phí
+              Nhan tu van
             </a>
           </div>
 
@@ -64,7 +64,7 @@ export default function Header() {
       {menuOpen && (
         <div className="mobile-menu">
           <ul className="mobile-nav-links">
-            {navLinks.map(link => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <a href={link.href} className="mobile-nav-link" onClick={(e) => handleNavClick(e, link.href)}>
                   {link.label}
@@ -73,9 +73,9 @@ export default function Header() {
             ))}
           </ul>
           <div className="mobile-nav-actions">
-            <a href="#" className="btn btn-outline" style={{ width: '100%', justifyContent: 'center' }}>Đăng nhập</a>
+            <a href="#" className="btn btn-outline" style={{ width: '100%', justifyContent: 'center' }}>Dang nhap</a>
             <a href="#pricing" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} onClick={(e) => handleNavClick(e, '#pricing')}>
-              Dùng thử miễn phí
+              Nhan tu van
             </a>
           </div>
         </div>

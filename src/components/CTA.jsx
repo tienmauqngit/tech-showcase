@@ -15,26 +15,26 @@ export default function CTA() {
             <Rocket size={32} />
           </div>
           <h2 className="cta-title">
-            Sẵn sàng chuyển đổi số<br />
-            <span>doanh nghiệp của bạn?</span>
+            San sang dua AI vao quy trinh<br />
+            <span>tu van va van hanh cua don vi ban?</span>
           </h2>
           <p className="cta-desc">
-            Nhiều doanh nghiệp đã tin tưởng TechVision. Bắt đầu hôm nay
-            với gói MIỄN PHÍ — không cần thẻ tín dụng, không cam kết.
+            Dat lich demo de xem truc tiep chatbot doanh nghiep, tro ly AI cong viec
+            va mo hinh Zalo AI tu van cho y te, hanh chinh va dich vu khach hang.
           </p>
           <div className="cta-actions">
             <a href="#pricing" className="btn btn-white">
-              Bắt đầu miễn phí ngay
+              Dat lich demo ngay
               <ArrowRight size={18} />
             </a>
             <a href="#" className="btn cta-demo-btn">
-              Đặt lịch demo
+              Nhan de xuat trien khai
             </a>
           </div>
           <div className="cta-trust">
-            <span>✓ Không cần thẻ tín dụng</span>
-            <span>✓ Cài đặt trong 5 phút</span>
-            <span>✓ Hủy bất kỳ lúc nào</span>
+            <span>✓ Khao sat nhu cau mien phi</span>
+            <span>✓ Co lo trinh trien khai ro rang</span>
+            <span>✓ Dong hanh toi uu sau go-live</span>
           </div>
         </div>
       </div>

@@ -1,102 +1,110 @@
 import { useState } from 'react'
-import { BarChart3, ShoppingCart, Users, Bot, ArrowRight, CheckCircle2, Package } from 'lucide-react'
+import { Briefcase, MessageCircle, Stethoscope, ArrowRight, CheckCircle2, Package } from 'lucide-react'
 import './Products.css'
 
 const products = [
   {
-    id: 'analytics',
-    icon: <BarChart3 size={24} />,
-    color: '#6366f1',
-    name: 'TechVision Analytics',
-    tagline: 'Phân tích & Báo cáo',
-    desc: 'Nền tảng phân tích dữ liệu thời gian thực, giúp bạn hiểu sâu về khách hàng, vận hành và thị trường.',
+    id: 'workplace-ai',
+    icon: <Briefcase size={24} />,
+    color: '#0f766e',
+    name: 'AI Workplace Assistant',
+    tagline: 'AI trong cong viec',
+    desc: 'Tro ly AI cho nhan vien: tra loi quy trinh, tom tat bien ban, tao van ban nhanh va ho tro bao cao.',
     features: [
-      'Dashboard tùy chỉnh không giới hạn',
-      'Báo cáo tự động định kỳ',
-      'Phân tích hành vi người dùng',
-      'Dự báo xu hướng với AI',
-      'Tích hợp 100+ nguồn dữ liệu',
+      'Tim va tom tat tai lieu noi bo trong vai giay',
+      'Tao mau van ban theo quy dinh tung phong ban',
+      'Tu dong tong hop so lieu va tao bao cao ngay',
+      'Goi y hanh dong tiep theo theo ngu canh cong viec',
+      'Theo doi KPI su dung AI theo don vi',
     ],
-    image: 'analytics',
+    image: 'workplace-ai',
   },
   {
-    id: 'commerce',
-    icon: <ShoppingCart size={24} />,
-    color: '#10b981',
-    name: 'TechVision Commerce',
-    tagline: 'Thương mại điện tử',
-    desc: 'Giải pháp thương mại điện tử toàn diện, từ quản lý sản phẩm đến xử lý đơn hàng và thanh toán.',
+    id: 'enterprise-chatbot',
+    icon: <MessageCircle size={24} />,
+    color: '#0284c7',
+    name: 'Enterprise Chatbot Platform',
+    tagline: 'Chatbot doanh nghiep',
+    desc: 'Nen tang chatbot da kenh giup tiep nhan va xu ly yeu cau khach hang tu dong 24/7.',
     features: [
-      'Quản lý kho hàng thông minh',
-      'Thanh toán đa kênh',
-      'Tích hợp vận chuyển tự động',
-      'CRM khách hàng tích hợp',
-      'Marketing automation',
+      'Kich ban hoi dap theo tung nganh nghe',
+      'Phan luong hoi thoai cho bo phan phu trach',
+      'Tich hop CRM de luu lich su va co hoi ban hang',
+      'Danh gia muc do hai long sau moi phien chat',
+      'Bao cao ti le xu ly tu dong va thoi gian phan hoi',
     ],
-    image: 'commerce',
+    image: 'enterprise-chatbot',
   },
   {
-    id: 'hrm',
-    icon: <Users size={24} />,
-    color: '#f59e0b',
-    name: 'TechVision HRM',
-    tagline: 'Quản lý nhân sự',
-    desc: 'Hệ thống quản lý nhân sự hiện đại, tối ưu hóa quy trình tuyển dụng, đào tạo và phát triển nhân tài.',
+    id: 'zalo-healthcare',
+    icon: <Stethoscope size={24} />,
+    color: '#2563eb',
+    name: 'Zalo AI Advisor',
+    tagline: 'Zalo AI cho y te va hanh chinh',
+    desc: 'Giai phap tu van qua Zalo OA cho benh vien, phong kham va don vi hanh chinh cong.',
     features: [
-      'Tuyển dụng & onboarding tự động',
-      'Chấm công & tính lương thông minh',
-      'Đánh giá hiệu suất KPI',
-      'Đào tạo & phát triển kỹ năng',
-      'Phúc lợi & bảo hiểm linh hoạt',
+      'Huong dan thu tuc, giay to va quy trinh tiep nhan',
+      'Dat lich kham, nhac lich va thong bao ket qua',
+      'Tra loi cau hoi thuong gap theo dung kieu ngu nghiep vu',
+      'Ket noi tong dai vien khi vuot pham vi AI',
+      'Thong ke luot hoi dap theo tung dich vu',
     ],
-    image: 'hrm',
-  },
-  {
-    id: 'ai',
-    icon: <Bot size={24} />,
-    color: '#8b5cf6',
-    name: 'TechVision AI Studio',
-    tagline: 'AI & Automation',
-    desc: 'Studio xây dựng ứng dụng AI không cần code, tạo chatbot, tự động hóa và quy trình thông minh.',
-    features: [
-      'No-code AI model builder',
-      'Chatbot đa ngôn ngữ',
-      'Xử lý văn bản & hình ảnh',
-      'Tích hợp API linh hoạt',
-      'Theo dõi hiệu suất model',
-    ],
-    image: 'ai',
+    image: 'zalo-healthcare',
   },
 ]
 
 function ProductVisual({ type, color }) {
   const items = {
-    analytics: (
+    'workplace-ai': (
       <div className="pv-analytics">
         <div className="pv-header">
-          <span className="pv-title">Revenue Overview</span>
-          <span className="pv-date">Tháng 2, 2026</span>
+          <span className="pv-title">AI Task Dashboard</span>
+          <span className="pv-date">Thang 03, 2026</span>
         </div>
-        <div className="pv-big-number">₫4.82B <span className="pv-up">+23%</span></div>
+        <div className="pv-big-number">12,840 <span className="pv-up">task AI</span></div>
         <div className="pv-bars">
-          {[60, 45, 80, 55, 95, 70, 85, 90, 65, 75, 88, 100].map((h, i) => (
+          {[50, 45, 58, 62, 75, 80, 70, 84, 88, 76, 90, 100].map((h, i) => (
             <div key={i} className="pv-bar-wrap">
               <div className="pv-bar" style={{ height: `${h}%`, background: color, opacity: i === 11 ? 1 : 0.3 }} />
             </div>
           ))}
         </div>
         <div className="pv-pills">
-          <span className="pv-pill" style={{ background: `${color}20`, color }}>Tăng trưởng tốt</span>
-          <span className="pv-pill" style={{ background: 'rgba(16,185,129,0.15)', color: '#10b981' }}>+12K khách hàng</span>
+          <span className="pv-pill" style={{ background: `${color}20`, color }}>Nang suat +35%</span>
+          <span className="pv-pill" style={{ background: 'rgba(16,185,129,0.15)', color: '#10b981' }}>Sai sot giam 22%</span>
         </div>
       </div>
     ),
-    commerce: (
+    'enterprise-chatbot': (
+      <div className="pv-ai">
+        <div className="pv-ai-chat">
+          <div className="pv-chat-msg bot">
+            <div className="pv-chat-bubble bot-bubble">Xin chao, toi co the ho tro ban van de gi?</div>
+          </div>
+          <div className="pv-chat-msg user">
+            <div className="pv-chat-bubble user-bubble" style={{ background: color }}>
+              Toi can tra cuu thu tuc cap lai ho so.
+            </div>
+          </div>
+          <div className="pv-chat-msg bot">
+            <div className="pv-chat-bubble bot-bubble">
+              Ban vui long cung cap ma ho so. Toi da gui danh sach giay to can bo sung.
+            </div>
+          </div>
+        </div>
+        <div className="pv-ai-models">
+          {['Knowledge Base', 'Intent AI', 'Live Agent'].map((m, i) => (
+            <span key={i} className="pv-model-tag" style={{ background: `${color}15`, color }}>{m}</span>
+          ))}
+        </div>
+      </div>
+    ),
+    'zalo-healthcare': (
       <div className="pv-commerce">
         {[
-          { name: 'Đơn hàng mới', count: 1284, badge: 'Hôm nay' },
-          { name: 'Doanh thu', count: '₫286M', badge: '' },
-          { name: 'Tồn kho', count: '4,820 SP', badge: 'Cập nhật' },
+          { name: 'Lich hen moi', count: 684, badge: 'Hom nay' },
+          { name: 'Luot tu van Zalo', count: '4,920', badge: '' },
+          { name: 'Ty le xu ly tu dong', count: '76%', badge: 'On dinh' },
         ].map((item, i) => (
           <div key={i} className="pv-commerce-row">
             <div className="pv-commerce-icon" style={{ background: `${color}20`, color }}>
@@ -110,63 +118,11 @@ function ProductVisual({ type, color }) {
           </div>
         ))}
         <div className="pv-progress-section">
-          <span className="pv-progress-label">Mục tiêu tháng</span>
+          <span className="pv-progress-label">Muc tieu giam tai quay tiep nhan</span>
           <div className="pv-progress-bar">
-            <div className="pv-progress-fill" style={{ width: '72%', background: color }} />
+            <div className="pv-progress-fill" style={{ width: '81%', background: color }} />
           </div>
-          <span className="pv-progress-pct" style={{ color }}>72%</span>
-        </div>
-      </div>
-    ),
-    hrm: (
-      <div className="pv-hrm">
-        <div className="pv-hrm-title">Nhân sự tháng này</div>
-        <div className="pv-hrm-stats">
-          <div className="pv-hrm-stat" style={{ background: `${color}15` }}>
-            <span className="pv-hrm-num" style={{ color }}>248</span>
-            <span>Nhân viên</span>
-          </div>
-          <div className="pv-hrm-stat" style={{ background: 'rgba(16,185,129,0.12)' }}>
-            <span className="pv-hrm-num" style={{ color: '#10b981' }}>12</span>
-            <span>Tuyển mới</span>
-          </div>
-          <div className="pv-hrm-stat" style={{ background: 'rgba(239,68,68,0.1)' }}>
-            <span className="pv-hrm-num" style={{ color: '#ef4444' }}>3</span>
-            <span>Nghỉ việc</span>
-          </div>
-        </div>
-        <div className="pv-hrm-list">
-          {['Nguyễn Văn An', 'Trần Thị Bình', 'Lê Minh Cường'].map((name, i) => (
-            <div key={i} className="pv-hrm-person">
-              <div className="pv-avatar" style={{ background: `hsl(${i * 80 + 220},70%,60%)` }}>{name[0]}</div>
-              <span>{name}</span>
-              <span className="pv-hrm-role" style={{ color }}>Kỹ sư {i + 1}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    ),
-    ai: (
-      <div className="pv-ai">
-        <div className="pv-ai-chat">
-          <div className="pv-chat-msg bot">
-            <div className="pv-chat-bubble bot-bubble">Xin chào! Tôi có thể giúp gì cho bạn?</div>
-          </div>
-          <div className="pv-chat-msg user">
-            <div className="pv-chat-bubble user-bubble" style={{ background: color }}>
-              Phân tích doanh số Q1 2026
-            </div>
-          </div>
-          <div className="pv-chat-msg bot">
-            <div className="pv-chat-bubble bot-bubble">
-              Doanh số Q1 tăng 28% so với cùng kỳ. Sản phẩm A dẫn đầu với ₫1.2B...
-            </div>
-          </div>
-        </div>
-        <div className="pv-ai-models">
-          {['GPT-4', 'Claude 3', 'Gemini'].map((m, i) => (
-            <span key={i} className="pv-model-tag" style={{ background: `${color}15`, color }}>{m}</span>
-          ))}
+          <span className="pv-progress-pct" style={{ color }}>81%</span>
         </div>
       </div>
     ),
@@ -184,15 +140,15 @@ export default function Products() {
         <div className="products-header">
           <div className="section-tag">
             <Package size={14} />
-            Sản phẩm
+            San pham tieu bieu
           </div>
           <h2 className="section-title">
-            Hệ sinh thái sản phẩm<br />
-            <span className="gradient-text">đa dạng & mạnh mẽ</span>
+            Bo san pham cong nghe<br />
+            <span className="gradient-text">ung dung AI theo tung bai toan</span>
           </h2>
           <p className="section-subtitle">
-            Bốn nền tảng phần mềm chuyên biệt, tích hợp hoàn hảo với nhau để phục vụ
-            mọi nhu cầu vận hành của doanh nghiệp.
+            Trien khai linh hoat theo quy mo to chuc, tu phuong an nhanh cho SME den mo hinh
+            tich hop sau cho benh vien, so ban nganh va doanh nghiep lon.
           </p>
         </div>
 
@@ -229,10 +185,10 @@ export default function Products() {
             </ul>
             <div className="product-actions">
               <a href="#pricing" className="btn btn-primary" style={{ background: product.color, boxShadow: `0 4px 14px ${product.color}40` }}>
-                Dùng thử ngay
+                Tu van giai phap
                 <ArrowRight size={16} />
               </a>
-              <button className="btn btn-outline">Tìm hiểu thêm</button>
+              <button className="btn btn-outline">Tai tai lieu demo</button>
             </div>
           </div>
 
