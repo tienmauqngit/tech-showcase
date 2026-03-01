@@ -65,12 +65,14 @@ jobs:
           TARGET_URL="ftp://$FTP_SERVER/domains/dichvucongngheqng.com/public_html/"
 
           if ! curl --silent --show-error --fail --connect-timeout 15 --max-time 30 \
+            --ftp-ssl-control \
             --user "$FTP_USERNAME:$FTP_PASSWORD" --list-only "$ROOT_URL" >/dev/null; then
-            echo "::error::FTP login failed. Check FTP_USERNAME/FTP_PASSWORD or account permissions."
+            echo "::error::FTP login failed (explicit TLS). Check FTP_USERNAME/FTP_PASSWORD or account permissions."
             exit 1
           fi
 
           if ! curl --silent --show-error --fail --connect-timeout 15 --max-time 30 \
+            --ftp-ssl-control \
             --user "$FTP_USERNAME:$FTP_PASSWORD" --list-only "$TARGET_URL" >/dev/null; then
             echo "::error::Logged in but cannot access /domains/dichvucongngheqng.com/public_html/. Check server-dir and FTP user permissions."
             exit 1
@@ -84,7 +86,8 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
+          protocol: ftps
+          port: 21
           local-dir: ./dist/
           server-dir: /domains/dichvucongngheqng.com/public_html/
           dangerous-clean-slate: true
