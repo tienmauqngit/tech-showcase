@@ -3,12 +3,12 @@ import { TrendingUp } from 'lucide-react'
 import './Stats.css'
 
 const stats = [
-  { value: 120, suffix: '+', label: 'Du an AI da trien khai', desc: 'Cho doanh nghiep, don vi cong va benh vien' },
-  { value: 76, suffix: '%', label: 'Ti le hoi dap tu dong', desc: 'Giam tai tong dai va bo phan tiep nhan' },
-  { value: 24, suffix: '/7', label: 'Van hanh lien tuc', desc: 'Khach hang duoc tu van moi luc' },
-  { value: 40, suffix: '%', label: 'Giam chi phi CSKH TB', desc: 'Nho toi uu quy trinh tu van va phan luong' },
-  { value: 3, suffix: ' ngay', label: 'Go-live nhanh', desc: 'Voi kich ban co ban cho web va Zalo OA' },
-  { value: 93, suffix: '%', label: 'Muc do hai long', desc: 'Theo khao sat sau trien khai va van hanh' },
+  { value: 120, suffix: '+', label: 'Dự án AI đã triển khai', desc: 'Cho doanh nghiệp, đơn vị công và bệnh viện' },
+  { value: 76, suffix: '%', label: 'Tỉ lệ hỏi đáp tự động', desc: 'Giảm tải tổng đài và bộ phận tiếp nhận' },
+  { value: 24, suffix: '/7', label: 'Vận hành liên tục', desc: 'Khách hàng được tư vấn mọi lúc' },
+  { value: 40, suffix: '%', label: 'Giảm chi phí CSKH TB', desc: 'Nhờ tối ưu quy trình tư vấn và phân luồng' },
+  { value: 3, suffix: ' ngày', label: 'Go-live nhanh', desc: 'Với kịch bản cơ bản cho web và Zalo OA' },
+  { value: 93, suffix: '%', label: 'Mức độ hài lòng', desc: 'Theo khảo sát sau triển khai và vận hành' },
 ]
 
 function useCountUp(target, duration = 1800, start = false) {
@@ -72,11 +72,11 @@ export default function Stats() {
         <div className="stats-header">
           <div className="section-tag" style={{ background: 'rgba(255,255,255,0.15)', color: 'white', borderColor: 'rgba(255,255,255,0.2)' }}>
             <TrendingUp size={14} />
-            So lieu trien khai
+            Số liệu triển khai
           </div>
           <h2 className="section-title" style={{ color: 'white' }}>
-            Ket qua do luong duoc<br />
-            <span style={{ opacity: 0.85 }}>tu cac du an thuc te</span>
+            Kết quả đo lường được<br />
+            <span style={{ opacity: 0.85 }}>từ các dự án thực tế</span>
           </h2>
         </div>
         <div className="stats-grid">

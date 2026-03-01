@@ -9,17 +9,17 @@ const plans = [
     color: '#0f766e',
     monthlyPrice: 990000,
     yearlyPrice: 790000,
-    desc: 'Cho doanh nghiep nho bat dau chatbot va tu van tu dong',
-    cta: 'Dang ky goi Basic',
+    desc: 'Cho doanh nghiệp nhỏ bắt đầu chatbot và tư vấn tự động',
+    cta: 'Đăng ký gói Basic',
     ctaStyle: 'outline',
     features: [
-      { text: '1 kenh chatbot website', ok: true },
-      { text: '50 kich ban hoi dap', ok: true },
-      { text: '2 tai khoan quan tri', ok: true },
-      { text: 'Bao cao co ban', ok: true },
-      { text: 'Tich hop Zalo OA', ok: false },
-      { text: 'Kho tri thuc nang cao', ok: false },
-      { text: 'SLA rieng', ok: false },
+      { text: '1 kênh chatbot website', ok: true },
+      { text: '50 kịch bản hỏi đáp', ok: true },
+      { text: '2 tài khoản quản trị', ok: true },
+      { text: 'Báo cáo cơ bản', ok: true },
+      { text: 'Tích hợp Zalo OA', ok: false },
+      { text: 'Kho tri thức nâng cao', ok: false },
+      { text: 'SLA riêng', ok: false },
     ],
   },
   {
@@ -28,18 +28,18 @@ const plans = [
     color: '#0284c7',
     monthlyPrice: 3490000,
     yearlyPrice: 2890000,
-    desc: 'Cho don vi can da kenh: web, Zalo AI, CSKH va bao cao van hanh',
-    cta: 'Nhan demo Professional',
+    desc: 'Cho đơn vị cần đa kênh: web, Zalo AI, CSKH và báo cáo vận hành',
+    cta: 'Nhận demo Professional',
     ctaStyle: 'primary',
     popular: true,
     features: [
-      { text: 'Da kenh: web + Zalo OA + fanpage', ok: true },
-      { text: 'Khong gioi han kich ban', ok: true },
-      { text: 'Kho tri thuc theo phong ban', ok: true },
-      { text: 'Phan luong toi nhan vien truc', ok: true },
-      { text: 'Dashboard KPI theo bo phan', ok: true },
-      { text: 'API ket noi CRM/HIS', ok: true },
-      { text: 'SLA mo rong', ok: false },
+      { text: 'Đa kênh: web + Zalo OA + fanpage', ok: true },
+      { text: 'Không giới hạn kịch bản', ok: true },
+      { text: 'Kho tri thức theo phòng ban', ok: true },
+      { text: 'Phân luồng tới nhân viên trực', ok: true },
+      { text: 'Dashboard KPI theo bộ phận', ok: true },
+      { text: 'API kết nối CRM/HIS', ok: true },
+      { text: 'SLA mở rộng', ok: false },
     ],
   },
   {
@@ -48,23 +48,23 @@ const plans = [
     color: '#2563eb',
     monthlyPrice: null,
     yearlyPrice: null,
-    desc: 'Giai phap tuy chinh cho benh vien, hanh chinh cong va tap doan',
-    cta: 'Lien he bao gia',
+    desc: 'Giải pháp tùy chỉnh cho bệnh viện, hành chính công và tập đoàn',
+    cta: 'Liên hệ báo giá',
     ctaStyle: 'dark',
     features: [
-      { text: 'Kien truc va quy trinh tuy chinh', ok: true },
-      { text: 'Bao mat va phan quyen theo chinh sach', ok: true },
-      { text: 'Tich hop sau voi he thong noi bo', ok: true },
+      { text: 'Kiến trúc và quy trình tùy chỉnh', ok: true },
+      { text: 'Bảo mật và phân quyền theo chính sách', ok: true },
+      { text: 'Tích hợp sâu với hệ thống nội bộ', ok: true },
       { text: 'On-premise hoac private cloud', ok: true },
       { text: 'SLA + doi van hanh rieng', ok: true },
-      { text: 'Dao tao theo phong ban', ok: true },
-      { text: 'Ho tro trien khai toan quoc', ok: true },
+      { text: 'Đào tạo theo phòng ban', ok: true },
+      { text: 'Hỗ trợ triển khai toàn quốc', ok: true },
     ],
   },
 ]
 
 function formatPrice(p) {
-  if (p === null) return 'Tuy chinh'
+  if (p === null) return 'Tùy chỉnh'
   return `${(p / 1000000).toFixed(2)}M`
 }
 
@@ -77,19 +77,19 @@ export default function Pricing() {
         <div className="pricing-header">
           <div className="section-tag">
             <Tag size={14} />
-            Bang gia giai phap
+            Bảng giá giải pháp
           </div>
           <h2 className="section-title">
-            Chon goi phu hop<br />
-            <span className="gradient-text">quy mo va muc tieu trien khai</span>
+            Chọn gói phù hợp<br />
+            <span className="gradient-text">quy mô và mục tiêu triển khai</span>
           </h2>
           <p className="section-subtitle">
-            Co ho tro tu van de xep cau hinh phu hop tung don vi, co the mo rong
-            theo giai doan ma khong phai lam lai he thong.
+            Có hỗ trợ tư vấn để xếp cấu hình phù hợp từng đơn vị, có thể mở rộng
+            theo giai đoạn mà không phải làm lại hệ thống.
           </p>
 
           <div className="billing-toggle">
-            <span className={!yearly ? 'active' : ''}>Thanh toan thang</span>
+            <span className={!yearly ? 'active' : ''}>Thanh toán tháng</span>
             <button
               className={`toggle-btn ${yearly ? 'on' : ''}`}
               onClick={() => setYearly((v) => !v)}
@@ -98,8 +98,8 @@ export default function Pricing() {
               <span className="toggle-knob" />
             </button>
             <span className={yearly ? 'active' : ''}>
-              Thanh toan nam
-              <span className="save-badge">Tiet kiem ~17%</span>
+              Thanh toán năm
+              <span className="save-badge">Tiết kiệm ~17%</span>
             </span>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function Pricing() {
             <div key={i} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
               {plan.popular && (
                 <div className="popular-badge">
-                  <Zap size={13} fill="white" /> Goi duoc chon nhieu
+                  <Zap size={13} fill="white" /> Gói được chọn nhiều
                 </div>
               )}
 
@@ -123,12 +123,12 @@ export default function Pricing() {
                     {formatPrice(yearly ? plan.yearlyPrice : plan.monthlyPrice)}
                   </span>
                   {plan.monthlyPrice !== null && (
-                    <span className="price-period">/thang</span>
+                    <span className="price-period">/tháng</span>
                   )}
                 </div>
                 {yearly && plan.monthlyPrice > 0 && (
                   <div className="price-yearly-note">
-                    Thanh toan {(plan.yearlyPrice * 12 / 1000000).toFixed(2)}M/nam
+                    Thanh toán {(plan.yearlyPrice * 12 / 1000000).toFixed(2)}M/năm
                   </div>
                 )}
                 <p className="plan-desc">{plan.desc}</p>
@@ -156,8 +156,8 @@ export default function Pricing() {
         </div>
 
         <div className="pricing-footer">
-          <p>Tat ca goi deu bao gom onboarding, tai lieu huong dan va bao cao hieu qua trien khai.</p>
-          <p>Can phuong an rieng cho don vi? <a href="#faq" style={{ color: 'var(--primary)', fontWeight: 600 }}>Xem FAQ</a> hoac <a href="#" style={{ color: 'var(--primary)', fontWeight: 600 }}>yeu cau tu van 1-1</a>.</p>
+          <p>Tất cả gói đều bao gồm onboarding, tài liệu hướng dẫn và báo cáo hiệu quả triển khai.</p>
+          <p>Cần phương án riêng cho đơn vị? <a href="#faq" style={{ color: 'var(--primary)', fontWeight: 600 }}>Xem FAQ</a> hoặc <a href="#" style={{ color: 'var(--primary)', fontWeight: 600 }}>yêu cầu tư vấn 1-1</a>.</p>
         </div>
       </div>
     </section>

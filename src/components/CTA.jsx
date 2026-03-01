@@ -15,26 +15,26 @@ export default function CTA() {
             <Rocket size={32} />
           </div>
           <h2 className="cta-title">
-            San sang dua AI vao quy trinh<br />
-            <span>tu van va van hanh cua don vi ban?</span>
+            Sẵn sàng đưa AI vào quy trình<br />
+            <span>tư vấn và vận hành của đơn vị bạn?</span>
           </h2>
           <p className="cta-desc">
-            Dat lich demo de xem truc tiep chatbot doanh nghiep, tro ly AI cong viec
-            va mo hinh Zalo AI tu van cho y te, hanh chinh va dich vu khach hang.
+            Đặt lịch demo để xem trực tiếp chatbot doanh nghiệp, trợ lý AI công việc
+            và mô hình Zalo AI tư vấn cho y tế, hành chính và dịch vụ khách hàng.
           </p>
           <div className="cta-actions">
             <a href="#pricing" className="btn btn-white">
-              Dat lich demo ngay
+              Đặt lịch demo ngay
               <ArrowRight size={18} />
             </a>
             <a href="#" className="btn cta-demo-btn">
-              Nhan de xuat trien khai
+              Nhận đề xuất triển khai
             </a>
           </div>
           <div className="cta-trust">
-            <span>✓ Khao sat nhu cau mien phi</span>
-            <span>✓ Co lo trinh trien khai ro rang</span>
-            <span>✓ Dong hanh toi uu sau go-live</span>
+            <span>✓ Khảo sát nhu cầu miễn phí</span>
+            <span>✓ Có lộ trình triển khai rõ ràng</span>
+            <span>✓ Đồng hành tối ưu sau go-live</span>
           </div>
         </div>
       </div>

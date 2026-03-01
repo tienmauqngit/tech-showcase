@@ -6,57 +6,57 @@ const features = [
     icon: <Cpu size={26} />,
     color: '#0f766e',
     bg: 'rgba(15,118,110,0.1)',
-    title: 'AI Agent cho cong viec noi bo',
-    desc: 'Tro ly AI tra loi quy trinh, tong hop van ban, viet email, tao bao cao nhanh cho nhan su van phong.',
+    title: 'AI Agent cho công việc nội bộ',
+    desc: 'Trợ lý AI trả lời quy trình, tổng hợp văn bản, viết email, tạo báo cáo nhanh cho nhân sự văn phòng.',
   },
   {
     icon: <MessageSquare size={26} />,
     color: '#0284c7',
     bg: 'rgba(2,132,199,0.1)',
-    title: 'Chatbot doanh nghiep',
-    desc: 'Tu dong tiep nhan cau hoi, huong dan thu tuc, loc nhu cau va chuyen tu van vien khi can.',
+    title: 'Chatbot doanh nghiệp',
+    desc: 'Tự động tiếp nhận câu hỏi, hướng dẫn thủ tục, lọc nhu cầu và chuyển tư vấn viên khi cần.',
   },
   {
     icon: <Smartphone size={26} />,
     color: '#2563eb',
     bg: 'rgba(37,99,235,0.1)',
-    title: 'Zalo AI tu van khach hang',
-    desc: 'Tich hop Zalo OA de tu van 24/7, gui nhac lich, xac nhan ho so va cham soc sau dich vu.',
+    title: 'Zalo AI tư vấn khách hàng',
+    desc: 'Tích hợp Zalo OA để tư vấn 24/7, gửi nhắc lịch, xác nhận hồ sơ và chăm sóc sau dịch vụ.',
   },
   {
     icon: <Workflow size={26} />,
     color: '#f59e0b',
     bg: 'rgba(245,158,11,0.1)',
-    title: 'Tu dong hoa quy trinh',
-    desc: 'Tu dong phan loai yeu cau, tao ticket, phan cong phong ban va theo doi trang thai xu ly.',
+    title: 'Tự động hóa quy trình',
+    desc: 'Tự động phân loại yêu cầu, tạo ticket, phân công phòng ban và theo dõi trạng thái xử lý.',
   },
   {
     icon: <Database size={26} />,
     color: '#7c3aed',
     bg: 'rgba(124,58,237,0.1)',
-    title: 'Kho tri thuc tap trung',
-    desc: 'Dong bo tai lieu nghiep vu, FAQ, quy dinh de AI tra loi dung ngu canh va dung chinh sach.',
+    title: 'Kho tri thức tập trung',
+    desc: 'Đồng bộ tài liệu nghiệp vụ, FAQ, quy định để AI trả lời đúng ngữ cảnh và đúng chính sách.',
   },
   {
     icon: <Shield size={26} />,
     color: '#059669',
     bg: 'rgba(5,150,105,0.1)',
-    title: 'Bao mat va phan quyen',
-    desc: 'Phan quyen theo vai tro, luu vet thao tac, an thong tin nhay cam trong moi kenh tuong tac.',
+    title: 'Bảo mật và phân quyền',
+    desc: 'Phân quyền theo vai trò, lưu vết thao tác, ẩn thông tin nhạy cảm trong mọi kênh tương tác.',
   },
   {
     icon: <Globe size={26} />,
     color: '#0ea5e9',
     bg: 'rgba(14,165,233,0.1)',
-    title: 'Da kenh mot nen tang',
-    desc: 'Quan ly hoi dap tu web, Zalo, fanpage, tong dai tren mot dashboard duy nhat.',
+    title: 'Đa kênh một nền tảng',
+    desc: 'Quản lý hỏi đáp từ web, Zalo, fanpage, tổng đài trên một dashboard duy nhất.',
   },
   {
     icon: <Headphones size={26} />,
     color: '#10b981',
     bg: 'rgba(16,185,129,0.1)',
-    title: 'Van hanh va toi uu lien tuc',
-    desc: 'Theo doi chat luong hoi dap, cap nhat kich ban va huan luyen AI theo du lieu moi.',
+    title: 'Vận hành và tối ưu liên tục',
+    desc: 'Theo dõi chất lượng hỏi đáp, cập nhật kịch bản và huấn luyện AI theo dữ liệu mới.',
   },
 ]
 
@@ -67,15 +67,15 @@ export default function Features() {
         <div className="features-header">
           <div className="section-tag">
             <Cpu size={14} />
-            Giai phap trong tam
+            Giải pháp trọng tâm
           </div>
           <h2 className="section-title">
-            Nen tang cong nghe cho<br />
-            <span className="gradient-text">tu van va van hanh thong minh</span>
+            Nền tảng công nghệ cho<br />
+            <span className="gradient-text">tư vấn và vận hành thông minh</span>
           </h2>
           <p className="section-subtitle">
-            Thiet ke cho bai toan thuc te trong doanh nghiep, y te va hanh chinh:
-            giam tai tong dai, tang toc xu ly ho so va nang cao trai nghiem nguoi dung.
+            Thiết kế cho bài toán thực tế trong doanh nghiệp, y tế và hành chính:
+            giảm tải tổng đài, tăng tốc xử lý hồ sơ và nâng cao trải nghiệm người dùng.
           </p>
         </div>
 
@@ -91,7 +91,7 @@ export default function Features() {
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                Xem chi tiet
+                Xem chi tiết
               </div>
             </div>
           ))}

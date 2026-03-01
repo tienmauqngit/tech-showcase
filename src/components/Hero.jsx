@@ -1,7 +1,7 @@
 import { ArrowRight, Play, Shield, Zap, Globe, Star } from 'lucide-react'
 import './Hero.css'
 
-const trustedLogos = ['Benh vien', 'So nganh', 'Cong ty dich vu', 'Truong hoc', 'Chuoi ban le', 'SME']
+const trustedLogos = ['Bệnh viện', 'Sở ngành', 'Công ty dịch vụ', 'Trường học', 'Chuỗi bán lẻ', 'SME']
 
 export default function Hero() {
   return (
@@ -17,48 +17,48 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-badge">
             <Star size={14} fill="currentColor" />
-            <span>Trien khai thanh cong cho 200+ don vi tai Viet Nam</span>
+            <span>Triển khai thành công cho 200+ đơn vị tại Việt Nam</span>
           </div>
 
           <h1 className="hero-title">
-            Ung dung <span className="gradient-text">AI trong cong viec</span>
+            Ứng dụng <span className="gradient-text">AI trong công việc</span>
             <br />
-            de tang toc van hanh va cham soc khach hang
+            để tăng tốc vận hành và chăm sóc khách hàng
           </h1>
 
           <p className="hero-desc">
-            TechVision cung cap bo giai phap AI cho doanh nghiep: tro ly AI noi bo,
-            chatbot tu van tu dong, va Zalo AI cho tiep nhan - huong dan - dat lich,
-            dac biet phu hop linh vuc y te, hanh chinh cong va dich vu khach hang.
+            TechVision cung cấp bộ giải pháp AI cho doanh nghiệp: trợ lý AI nội bộ,
+            chatbot tư vấn tự động, và Zalo AI cho tiếp nhận - hướng dẫn - đặt lịch,
+            đặc biệt phù hợp lĩnh vực y tế, hành chính công và dịch vụ khách hàng.
           </p>
 
           <div className="hero-actions">
             <a href="#pricing" className="btn btn-primary hero-cta">
-              Nhan demo giai phap
+              Nhận demo giải pháp
               <ArrowRight size={18} />
             </a>
             <button className="hero-demo-btn">
               <span className="play-icon">
                 <Play size={14} fill="white" />
               </span>
-              Xem demo thuc te
+              Xem demo thực tế
             </button>
           </div>
 
           <div className="hero-stats">
             <div className="hero-stat">
               <strong>70%</strong>
-              <span>Giam tai CSKH</span>
+              <span>Giảm tải CSKH</span>
             </div>
             <div className="hero-stat-divider" />
             <div className="hero-stat">
               <strong>24/7</strong>
-              <span>Tu van tu dong</span>
+              <span>Tư vấn tự động</span>
             </div>
             <div className="hero-stat-divider" />
             <div className="hero-stat">
-              <strong>3-14 ngay</strong>
-              <span>Thoi gian trien khai</span>
+              <strong>3-14 ngày</strong>
+              <span>Thời gian triển khai</span>
             </div>
           </div>
         </div>
@@ -76,12 +76,12 @@ export default function Hero() {
             <div className="card-body">
               <div className="metric-row">
                 <div className="metric">
-                  <span className="metric-label">Hoi dap da xu ly</span>
+                  <span className="metric-label">Hỏi đáp đã xử lý</span>
                   <span className="metric-value">42,680</span>
                   <span className="metric-change positive">+31%</span>
                 </div>
                 <div className="metric">
-                  <span className="metric-label">Ty le tu dong hoa</span>
+                  <span className="metric-label">Tỷ lệ tự động hóa</span>
                   <span className="metric-value">78%</span>
                   <span className="metric-change positive">+12%</span>
                 </div>
@@ -111,15 +111,15 @@ export default function Hero() {
           <div className="hero-card float-card float-card-1">
             <Shield size={20} style={{ color: 'var(--success)' }} />
             <div>
-              <div className="float-card-title">Bao mat du lieu nhay cam</div>
-              <div className="float-card-sub">Phu hop quy trinh y te va hanh chinh</div>
+              <div className="float-card-title">Bảo mật dữ liệu nhạy cảm</div>
+              <div className="float-card-sub">Phù hợp quy trình y tế và hành chính</div>
             </div>
           </div>
 
           <div className="hero-card float-card float-card-2">
             <Zap size={20} style={{ color: 'var(--accent)' }} />
             <div>
-              <div className="float-card-title">Tu van da kenh</div>
+              <div className="float-card-title">Tư vấn đa kênh</div>
               <div className="float-card-sub">Web, Zalo OA, Facebook, hotline</div>
             </div>
           </div>
@@ -127,8 +127,8 @@ export default function Hero() {
           <div className="hero-card float-card float-card-3">
             <Globe size={20} style={{ color: 'var(--secondary)' }} />
             <div>
-              <div className="float-card-title">Tieng Viet theo nganh</div>
-              <div className="float-card-sub">Kich ban rieng cho y te va hanh chinh</div>
+              <div className="float-card-title">Tiếng Việt theo ngành</div>
+              <div className="float-card-sub">Kịch bản riêng cho y tế và hành chính</div>
             </div>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function Hero() {
 
       <div className="trusted-section">
         <div className="container">
-          <p className="trusted-label">Duoc ap dung cho don vi cong, benh vien va doanh nghiep dich vu</p>
+          <p className="trusted-label">Được áp dụng cho đơn vị công, bệnh viện và doanh nghiệp dịch vụ</p>
           <div className="trusted-logos">
             {trustedLogos.map((logo) => (
               <div key={logo} className="trusted-logo">{logo}</div>

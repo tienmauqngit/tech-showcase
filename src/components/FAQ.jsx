@@ -4,28 +4,28 @@ import './FAQ.css'
 
 const faqs = [
   {
-    q: 'Giai phap co phu hop cho benh vien va don vi hanh chinh cong khong?',
-    a: 'Co. He thong duoc thiet ke theo quy trinh tiep nhan ho so, huong dan thu tuc, dat lich va cham soc sau xu ly. Noi dung tra loi co the tuy chinh theo tung don vi.',
+    q: 'Giải pháp có phù hợp cho bệnh viện và đơn vị hành chính công không?',
+    a: 'Có. Hệ thống được thiết kế theo quy trình tiếp nhận hồ sơ, hướng dẫn thủ tục, đặt lịch và chăm sóc sau xử lý. Nội dung trả lời có thể tùy chỉnh theo từng đơn vị.',
   },
   {
-    q: 'Co tich hop duoc Zalo OA, website va CRM/HIS khong?',
-    a: 'Co. Nhan su co the van hanh tren mot dashboard, du lieu hoi dap duoc dong bo de theo doi lich su xu ly va do hieu qua.',
+    q: 'Có tích hợp được Zalo OA, website và CRM/HIS không?',
+    a: 'Có. Nhân sự có thể vận hành trên một dashboard, dữ liệu hỏi đáp được đồng bộ để theo dõi lịch sử xử lý và đo hiệu quả.',
   },
   {
-    q: 'AI co thay the hoan toan nhan vien tu van khong?',
-    a: 'Khong. Muc tieu la giam viec lap lai va tang toc phan hoi. Cac tinh huong phuc tap van duoc chuyen den nhan vien phu trach.',
+    q: 'AI có thay thế hoàn toàn nhân viên tư vấn không?',
+    a: 'Không. Mục tiêu là giảm việc lặp lại và tăng tốc phản hồi. Các tình huống phức tạp vẫn được chuyển đến nhân viên phụ trách.',
   },
   {
-    q: 'Mat bao lau de trien khai he thong dau tien?',
-    a: 'Thuong tu 3 den 14 ngay tuy muc do tich hop. Ban dau co the go-live nhanh voi bo kich ban co ban, sau do mo rong theo giai doan.',
+    q: 'Mất bao lâu để triển khai hệ thống đầu tiên?',
+    a: 'Thường từ 3 đến 14 ngày tùy mức độ tích hợp. Ban đầu có thể go-live nhanh với bộ kịch bản cơ bản, sau đó mở rộng theo giai đoạn.',
   },
   {
-    q: 'Du lieu nhay cam duoc bao ve nhu the nao?',
-    a: 'He thong co phan quyen theo vai tro, luu vet thao tac, va cho phep an thong tin nhay cam trong qua trinh xu ly hoi dap.',
+    q: 'Dữ liệu nhạy cảm được bảo vệ như thế nào?',
+    a: 'Hệ thống có phân quyền theo vai trò, lưu vết thao tác, và cho phép ẩn thông tin nhạy cảm trong quá trình xử lý hỏi đáp.',
   },
   {
-    q: 'Co ho tro dao tao doi ngu van hanh khong?',
-    a: 'Co. Goi trien khai bao gom huong dan su dung, tai lieu van hanh va buoi dao tao cho nhan vien quan tri noi dung.',
+    q: 'Có hỗ trợ đào tạo đội ngũ vận hành không?',
+    a: 'Có. Gói triển khai bao gồm hướng dẫn sử dụng, tài liệu vận hành và buổi đào tạo cho nhân viên quản trị nội dung.',
   },
 ]
 
@@ -55,11 +55,11 @@ export default function FAQ() {
         <div className="faq-header">
           <div className="section-tag">
             <HelpCircle size={14} />
-            Cau hoi thuong gap
+            Câu hỏi thường gặp
           </div>
           <h2 className="section-title">
-            Ban can lam ro dieu gi?<br />
-            <span className="gradient-text">Chung toi san sang giai dap</span>
+            Bạn cần làm rõ điều gì?<br />
+            <span className="gradient-text">Chúng tôi sẵn sàng giải đáp</span>
           </h2>
         </div>
 
@@ -75,14 +75,14 @@ export default function FAQ() {
               <div className="faq-contact-icon">
                 <HelpCircle size={28} />
               </div>
-              <h3>Can tu van theo bai toan rieng?</h3>
-              <p>Gui nhu cau cua ban, doi ngu TechVision se de xuat lo trinh va cau hinh phu hop theo linh vuc.</p>
+              <h3>Cần tư vấn theo bài toán riêng?</h3>
+              <p>Gửi nhu cầu của bạn, đội ngũ TechVision sẽ đề xuất lộ trình và cấu hình phù hợp theo lĩnh vực.</p>
               <div className="faq-contact-methods">
                 <a href="#" className="contact-method">
                   <span className="cm-icon">Chat</span>
                   <div>
-                    <div className="cm-title">Tu van nhanh</div>
-                    <div className="cm-sub">Phan hoi trong gio hanh chinh</div>
+                    <div className="cm-title">Tư vấn nhanh</div>
+                    <div className="cm-sub">Phản hồi trong giờ hành chính</div>
                   </div>
                 </a>
                 <a href="#" className="contact-method">
@@ -101,7 +101,7 @@ export default function FAQ() {
                 </a>
               </div>
               <a href="#" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center', marginTop: '8px' }}>
-                Nhan tu van 1-1
+                Nhận tư vấn 1-1
               </a>
             </div>
           </div>

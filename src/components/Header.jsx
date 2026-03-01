@@ -3,10 +3,10 @@ import { Menu, X, Zap } from 'lucide-react'
 import './Header.css'
 
 const navLinks = [
-  { label: 'Giai phap', href: '#features' },
-  { label: 'San pham AI', href: '#products' },
-  { label: 'Quy trinh', href: '#how-it-works' },
-  { label: 'Bang gia', href: '#pricing' },
+  { label: 'Giải pháp', href: '#features' },
+  { label: 'Sản phẩm AI', href: '#products' },
+  { label: 'Quy trình', href: '#how-it-works' },
+  { label: 'Bảng giá', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
 ]
 
@@ -49,9 +49,9 @@ export default function Header() {
           </ul>
 
           <div className="nav-actions">
-            <a href="#" className="nav-login">Dang nhap</a>
+            <a href="#" className="nav-login">Đăng nhập</a>
             <a href="#pricing" className="btn btn-primary nav-cta" onClick={(e) => handleNavClick(e, '#pricing')}>
-              Nhan tu van
+              Nhận tư vấn
             </a>
           </div>
 
@@ -73,9 +73,9 @@ export default function Header() {
             ))}
           </ul>
           <div className="mobile-nav-actions">
-            <a href="#" className="btn btn-outline" style={{ width: '100%', justifyContent: 'center' }}>Dang nhap</a>
+            <a href="#" className="btn btn-outline" style={{ width: '100%', justifyContent: 'center' }}>Đăng nhập</a>
             <a href="#pricing" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} onClick={(e) => handleNavClick(e, '#pricing')}>
-              Nhan tu van
+              Nhận tư vấn
             </a>
           </div>
         </div>

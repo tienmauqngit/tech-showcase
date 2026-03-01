@@ -2,31 +2,31 @@ import { Zap, Linkedin, Youtube, Facebook, Mail, Phone, MapPin, ArrowUp } from '
 import './Footer.css'
 
 const footerLinks = {
-  'Giai phap': [
-    'AI trong cong viec',
-    'Chatbot doanh nghiep',
-    'Zalo AI tu van',
-    'Tu dong hoa tiep nhan',
-    'Bao cao van hanh',
+  'Giải pháp': [
+    'AI trong công việc',
+    'Chatbot doanh nghiệp',
+    'Zalo AI tư vấn',
+    'Tự động hóa tiếp nhận',
+    'Báo cáo vận hành',
   ],
-  'Linh vuc': [
-    'Y te',
-    'Hanh chinh cong',
-    'Giao duc',
-    'Tai chinh - bao hiem',
-    'Ban le - dich vu',
+  'Lĩnh vực': [
+    'Y tế',
+    'Hành chính công',
+    'Giáo dục',
+    'Tài chính - bảo hiểm',
+    'Bán lẻ - dịch vụ',
   ],
-  'Tai nguyen': [
-    'Tai lieu san pham',
+  'Tài nguyên': [
+    'Tài liệu sản phẩm',
     'Case study',
-    'Huong dan trien khai',
-    'Cau hoi thuong gap',
+    'Hướng dẫn triển khai',
+    'Câu hỏi thường gặp',
   ],
-  'Cong ty': [
-    'Ve chung toi',
-    'Lien he',
-    'Doi tac',
-    'Chinh sach bao mat',
+  'Công ty': [
+    'Về chúng tôi',
+    'Liên hệ',
+    'Đối tác',
+    'Chính sách bảo mật',
   ],
 }
 
@@ -52,7 +52,7 @@ export default function Footer() {
                 <span className="logo-text">TechVision AI</span>
               </a>
               <p className="footer-tagline">
-                Nen tang cong nghe giup to chuc ung dung AI vao cong viec va cham soc khach hang.
+                Nền tảng công nghệ giúp tổ chức ứng dụng AI vào công việc và chăm sóc khách hàng.
               </p>
               <div className="footer-contacts">
                 <div className="footer-contact-item">
@@ -65,7 +65,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-contact-item">
                   <MapPin size={15} />
-                  <span>Da Nang - Ha Noi - TP HCM</span>
+                  <span>Đà Nẵng - Hà Nội - TP HCM</span>
                 </div>
               </div>
               <div className="footer-socials">
@@ -100,8 +100,8 @@ export default function Footer() {
               © 2026 TechVision AI Solutions. All rights reserved.
             </p>
             <div className="footer-bottom-links">
-              <a href="#">Dieu khoan dich vu</a>
-              <a href="#">Chinh sach bao mat</a>
+              <a href="#">Điều khoản dịch vụ</a>
+              <a href="#">Chính sách bảo mật</a>
               <a href="#">Cookie Policy</a>
             </div>
             <button className="scroll-top" onClick={scrollToTop} aria-label="Scroll to top">

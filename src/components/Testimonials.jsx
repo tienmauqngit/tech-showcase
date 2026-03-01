@@ -4,43 +4,43 @@ import './Testimonials.css'
 
 const testimonials = [
   {
-    name: 'Tran Minh Khang',
-    role: 'Giam doc van hanh',
-    company: 'Benh vien da khoa',
+    name: 'Trần Minh Khang',
+    role: 'Giám đốc vận hành',
+    company: 'Bệnh viện đa khoa',
     avatar: 'TK',
     avatarBg: '#0f766e',
     rating: 5,
-    content: 'Sau khi trien khai Zalo AI, so cuoc goi lap lai ve thu tuc kham giam manh. Nguoi benh nhan nhan huong dan ro rang hon va dat lich nhanh hon.',
-    tag: 'Zalo AI tu van y te',
+    content: 'Sau khi triển khai Zalo AI, số cuộc gọi lặp lại về thủ tục khám giảm mạnh. Người bệnh nhận hướng dẫn rõ ràng hơn và đặt lịch nhanh hơn.',
+    tag: 'Zalo AI tư vấn y tế',
   },
   {
-    name: 'Le Thu Trang',
-    role: 'Truong phong mot cua',
-    company: 'Don vi hanh chinh',
+    name: 'Lê Thu Trang',
+    role: 'Trưởng phòng một cửa',
+    company: 'Đơn vị hành chính',
     avatar: 'LT',
     avatarBg: '#0284c7',
     rating: 5,
-    content: 'Chatbot xu ly phan lon cau hoi co ban ve ho so va quy trinh. Nhan vien co them thoi gian tap trung cho ho so phuc tap, chat luong phuc vu tang ro.',
-    tag: 'Chatbot hanh chinh cong',
+    content: 'Chatbot xử lý phần lớn câu hỏi cơ bản về hồ sơ và quy trình. Nhân viên có thêm thời gian tập trung cho hồ sơ phức tạp, chất lượng phục vụ tăng rõ.',
+    tag: 'Chatbot hành chính công',
   },
   {
-    name: 'Nguyen Quoc Bao',
+    name: 'Nguyễn Quốc Bảo',
     role: 'CEO',
-    company: 'Cong ty dich vu tai chinh',
+    company: 'Công ty dịch vụ tài chính',
     avatar: 'NB',
     avatarBg: '#2563eb',
     rating: 5,
-    content: 'AI Workplace giup doi ngu van phong xu ly tai lieu nhanh hon va chuan hon. Chi sau mot quy, KPI nang suat cua team da tang vuot muc ky vong.',
-    tag: 'AI trong cong viec noi bo',
+    content: 'AI Workplace giúp đội ngũ văn phòng xử lý tài liệu nhanh hơn và chuẩn hơn. Chỉ sau một quý, KPI năng suất của team đã tăng vượt mức kỳ vọng.',
+    tag: 'AI trong công việc nội bộ',
   },
   {
-    name: 'Pham Gia Han',
+    name: 'Phạm Gia Hân',
     role: 'Head of Customer Care',
-    company: 'Chuoi phong kham',
+    company: 'Chuỗi phòng khám',
     avatar: 'PH',
     avatarBg: '#10b981',
     rating: 5,
-    content: 'He thong da kenh cua TechVision dong bo du lieu hoi dap giua web va Zalo. Doi CSKH theo doi moi yeu cau tren mot man hinh, khong bo sot khach hang.',
+    content: 'Hệ thống đa kênh của TechVision đồng bộ dữ liệu hỏi đáp giữa web và Zalo. Đội CSKH theo dõi mọi yêu cầu trên một màn hình, không bỏ sót khách hàng.',
     tag: 'Omnichannel support AI',
   },
 ]
@@ -59,11 +59,11 @@ export default function Testimonials() {
         <div className="testimonials-header">
           <div className="section-tag">
             <MessageSquare size={14} />
-            Khach hang danh gia
+            Khách hàng đánh giá
           </div>
           <h2 className="section-title">
-            Phan hoi tu cac don vi<br />
-            <span className="gradient-text">da ung dung AI vao van hanh</span>
+            Phản hồi từ các đơn vị<br />
+            <span className="gradient-text">đã ứng dụng AI vào vận hành</span>
           </h2>
         </div>
 
