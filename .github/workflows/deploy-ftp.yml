@@ -24,6 +24,60 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Validate FTP secrets
+        shell: bash
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          [ -n "${FTP_SERVER:-}" ] || { echo "::error::Missing secret FTP_SERVER"; exit 1; }
+          [ -n "${FTP_USERNAME:-}" ] || { echo "::error::Missing secret FTP_USERNAME"; exit 1; }
+          [ -n "${FTP_PASSWORD:-}" ] || { echo "::error::Missing secret FTP_PASSWORD"; exit 1; }
+          echo "Secrets check passed."
+
+      - name: Check DNS and port 21
+        shell: bash
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          set -euo pipefail
+          if ! getent hosts "$FTP_SERVER" >/dev/null; then
+            echo "::error::Cannot resolve FTP_SERVER: $FTP_SERVER"
+            exit 1
+          fi
+          if ! timeout 10 bash -c "cat < /dev/null > /dev/tcp/$FTP_SERVER/21"; then
+            echo "::error::Cannot connect to $FTP_SERVER:21 (network/firewall/host blocking GitHub runners)"
+            exit 1
+          fi
+          echo "Network check passed."
+
+      - name: Probe FTP login and target directory
+        shell: bash
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+          ROOT_URL="ftp://$FTP_SERVER/"
+          TARGET_URL="ftp://$FTP_SERVER/domains/dichvucongngheqng.com/public_html/"
+
+          if ! curl --silent --show-error --fail --connect-timeout 15 --max-time 30 \
+            --user "$FTP_USERNAME:$FTP_PASSWORD" --list-only "$ROOT_URL" >/dev/null; then
+            echo "::error::FTP login failed. Check FTP_USERNAME/FTP_PASSWORD or account permissions."
+            exit 1
+          fi
+
+          if ! curl --silent --show-error --fail --connect-timeout 15 --max-time 30 \
+            --user "$FTP_USERNAME:$FTP_PASSWORD" --list-only "$TARGET_URL" >/dev/null; then
+            echo "::error::Logged in but cannot access /domains/dichvucongngheqng.com/public_html/. Check server-dir and FTP user permissions."
+            exit 1
+          fi
+
+          echo "FTP login/path check passed."
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
@@ -35,3 +89,4 @@ jobs:
           local-dir: ./dist/
           server-dir: /domains/dichvucongngheqng.com/public_html/
           dangerous-clean-slate: true
+          log-level: verbose
