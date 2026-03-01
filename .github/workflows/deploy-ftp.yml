@@ -67,6 +67,6 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./dist/
-          server-dir: /domains/dichvucongngheqng.com/public_html/
+          server-dir: /home/dichv291/domains/dichvucongngheqng.com/public_html/
           dangerous-clean-slate: true
           log-level: verbose
